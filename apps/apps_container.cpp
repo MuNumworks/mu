@@ -118,7 +118,7 @@ void AppsContainer::muReset(bool keepStorage) {
   if (!keepStorage) [[likely]] {
     Ion::Storage::sharedStorage()->destroyAllRecords();
   } else {
-    Code::ScriptStore::examRename(1);
+    // Code::ScriptStore::examRename(1);
   }
 }
 

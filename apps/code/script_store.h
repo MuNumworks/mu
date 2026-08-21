@@ -21,7 +21,7 @@ public:
 
   static void setKMinusInExamMode(int value);
   
-  static void examRename(int value);
+  // static void examRename(int value);
 
   // Storage information
   static bool ScriptNameIsFree(const char * baseName);

@@ -12,7 +12,7 @@ STATIC MP_DEFINE_CONST_FUN_OBJ_0(modmu_logo_obj, modmu_logo);
 STATIC MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(modmu_fill_obj,0,1,modmu_fill);
 STATIC MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(modmu_get_dir_obj,2,3,modmu_get_dir);
 STATIC MP_DEFINE_CONST_FUN_OBJ_0(modmu_get_pressed_obj, modmu_get_pressed);
-STATIC MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(modmu_brange_obj, 1,3,modmu_brange);
+// STATIC MP_DEFINE_CONST_FUN_OBJ_VAR_BETWEEN(modmu_brange_obj, 1,3,modmu_brange);
 
 STATIC const mp_rom_map_elem_t modmu_module_globals_table[] = {
   { MP_ROM_QSTR(MP_QSTR___name__), MP_ROM_QSTR(MP_QSTR_mu) },
@@ -27,9 +27,8 @@ STATIC const mp_rom_map_elem_t modmu_module_globals_table[] = {
   { MP_ROM_QSTR(MP_QSTR_logo), (mp_obj_t)&modmu_logo_obj },
   { MP_ROM_QSTR(MP_QSTR_fill), (mp_obj_t)&modmu_fill_obj },
   { MP_ROM_QSTR(MP_QSTR_get_dir), (mp_obj_t)&modmu_get_dir_obj}, 
-  { MP_ROM_QSTR(MP_QSTR_get_pressed), (mp_obj_t)&modmu_get_pressed_obj },
-  { MP_ROM_QSTR(MP_QSTR_brange), (mp_obj_t)&modmu_brange_obj }
-  
+  { MP_ROM_QSTR(MP_QSTR_get_pressed), (mp_obj_t)&modmu_get_pressed_obj }
+  // { MP_ROM_QSTR(MP_QSTR_brange), (mp_obj_t)&modmu_brange_obj }
 
 };
 

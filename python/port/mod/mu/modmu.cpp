@@ -308,30 +308,30 @@ mp_obj_t modmu_get_pressed() {
   return result;
 }
 
+/* What is this shit ? */
+// mp_obj_t modmu_brange(size_t n_args, const mp_obj_t * args) {
+//   int start = (n_args >= 2)  ? mp_obj_get_int(args[0]) : 1;  
+//   int stop = (n_args >= 2)  ? mp_obj_get_int(args[1])+1 : mp_obj_get_int(args[0])+1;  
+//   int step = (n_args>=3) ? mp_obj_get_int(args[2]) : 1;
+//   size_t size = (stop - start + step - 1) / step; 
+//   if (step == 0) {
+//       mp_raise_ValueError("step cannot be 0");
+//   }
 
-mp_obj_t modmu_brange(size_t n_args, const mp_obj_t * args) {
-  int start = (n_args >= 2)  ? mp_obj_get_int(args[0]) : 1;  
-  int stop = (n_args >= 2)  ? mp_obj_get_int(args[1])+1 : mp_obj_get_int(args[0])+1;  
-  int step = (n_args>=3) ? mp_obj_get_int(args[2]) : 1;
-  size_t size = (stop - start + step - 1) / step; 
-  if (step == 0) {
-      mp_raise_ValueError("step cannot be 0");
-  }
+//   if ((step > 0 && start >= stop) || (step < 0 && start <= stop)) {
+//     size = 0;
+//     return nullptr;
+//   }
 
-  if ((step > 0 && start >= stop) || (step < 0 && start <= stop)) {
-    size = 0;
-    return nullptr;
-  }
+//   mp_obj_t *items = m_new(mp_obj_t, size); 
 
-  mp_obj_t *items = m_new(mp_obj_t, size); 
+//   for (size_t i = 0; i < size; ++i) {
+//         items[i] = mp_obj_new_int(start + i * step);
+//     }
 
-  for (size_t i = 0; i < size; ++i) {
-        items[i] = mp_obj_new_int(start + i * step);
-    }
+//     mp_obj_t my_list = mp_obj_new_list(size, items);
 
-    mp_obj_t my_list = mp_obj_new_list(size, items);
+//     m_del(mp_obj_t, items, size);
 
-    m_del(mp_obj_t, items, size);
-
-    return my_list;
-}
+//     return my_list;
+// }

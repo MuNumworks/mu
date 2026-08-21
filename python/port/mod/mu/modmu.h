@@ -12,8 +12,8 @@ mp_obj_t modmu_logo();
 mp_obj_t modmu_fill(size_t n_args, const mp_obj_t * args);
 mp_obj_t modmu_get_dir(size_t n_args, const mp_obj_t * args);
 mp_obj_t modmu_get_pressed();
-mp_obj_t modmu_brange(size_t n_args, const mp_obj_t * args);
 
+// mp_obj_t modmu_brange(size_t n_args, const mp_obj_t * args);
 // mp_obj_t modmu_get_nearest(mp_obj_t pos, mp_obj_t list_pos);
 // mp_obj_t modmu_presses_update();
 // mp_obj_t modmu_click(mp_obj_t key_o);
