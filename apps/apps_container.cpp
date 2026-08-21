@@ -109,12 +109,13 @@ void AppsContainer::reset() {
   }
 }
 
-void AppsContainer::muReset(bool storage) {
+void AppsContainer::muReset(bool keepStorage) {
   Clipboard::sharedClipboard()->reset();
   for (int i = 0; i < numberOfApps(); i++) {
     appSnapshotAtIndex(i)->reset();
   }
-  if (storage) {
+  /* This reset function will most likely be called with keepStorage=false.  */
+  if (!keepStorage) [[likely]] {
     Ion::Storage::sharedStorage()->destroyAllRecords();
   } else {
     Code::ScriptStore::examRename(1);
@@ -490,7 +491,9 @@ void AppsContainer::redrawWindow(bool force) {
 void AppsContainer::activateExamMode(GlobalPreferences::ExamMode examMode) {
   assert(examMode != GlobalPreferences::ExamMode::Off && examMode != GlobalPreferences::ExamMode::Unknown);
   
-  muReset(false);
+  /* For now we're still using classic reset function */
+  // muReset(false);
+  this->reset();
 
   Ion::LED::setColor(KDColorRed);
   
