@@ -1,17 +1,17 @@
-<p align="center"><img src="https://github.com/Laporte12974/UpsilonDesign/blob/89a15953ae128aef8aa7d066dcaaf8d5c70f02a5/UPSILogo.png" /></p>
+<!--<p align="center"><img src="https://github.com/Laporte12974/UpsilonDesign/blob/89a15953ae128aef8aa7d066dcaaf8d5c70f02a5/UPSILogo.png" /></p>
 
 <p align="center">
   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="cc by-nc-sa 4.0" src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-525252.svg?labelColor=292929&logo=creative%20commons&style=for-the-badge" /></a>
   <a href="https://github.com/UpsilonNumworks/Upsilon/issues"><img alt="Issues" src="https://img.shields.io/github/issues/UpsilonNumworks/Upsilon.svg?labelColor=292929&logo=git&style=for-the-badge" /></a>
   <br/>
   <a href="https://discord.gg/hnEqPzAJzn"><img alt="Discord" src="https://img.shields.io/discord/663420259851567114?color=blue&labelColor=292929&label=chat%20-%20discord&logo=discord&style=for-the-badge" /></a>
-</p>
+</p>-->
 
 > Vous ne comprenez pas l'anglais ? Vous êtes francophone ? Regardez le [*LISEZ-MOI* français](./README.fr.md) !
 
 ## About
 
-Upsilon is a fork of Omega, an user-made OS that runs on the Numworks calculator, which brings many features to it, but was discontinued because of a policy change from Numworks. Upsilon is for the people who want to see a future for user-made OSes for Numworks, even after the closure and archiving of Omega.
+Mu is a fork of Upsilon, which is a fork of Omega, an user-made OS that runs on the Numworks calculator, which brings many features to it, but was discontinued because of a policy change from Numworks. Upsilon is for the people who want to see a future for user-made OSes for Numworks, even after the closure and archiving of Omega.
 
 ### Some new features
 
@@ -414,9 +414,9 @@ The simulator is now in `output/release/simulator/web/simulator.zip`
 You need devkitPro and devkitARM installed and in your path (instructions [here](https://devkitpro.org/wiki/Getting_Started))
 
 ```bash
-git clone --recursive https://github.com/UpsilonNumworks/Upsilon.git
-cd Upsilon
-git checkout upsilon-dev
+git clone --recursive https://github.com/MuNumworks/mu.git
+cd mu
+git checkout dev
 make PLATFORM=simulator TARGET=3ds -j(nproc)
 ```
 
@@ -437,9 +437,9 @@ First, install gint and fxsdk along with a cross compiler for the calculator. Th
 
 Next:
 ```bash
-git clone --recursive https://github.com/UpsilonNumworks/Upsilon.git
-cd Omega
-git checkout upsilon-dev
+git clone --recursive https://github.com/MuNumworks/mu.git
+cd mu
+git checkout dev
 make PLATFORM=simulator TARGET=fxcg -j$(nproc)
 ```
 Then copy the file at `./output/release/simulator/fxcg/epsilon.g3a` to the calculator over USB.
@@ -469,7 +469,7 @@ To contribute, please refer to [Omega's Wiki](https://github.com/Omega-Numworks/
 
 ## Related repositories
 
-Here are the main links toward Omega's different websites and repositories, that have been used for the creation of Upsilon.
+Here are the main links toward Omega's different websites and repositories, that have been used for the creation of Mu.
 
 - [Omega Themes](https://github.com/Omega-Numworks/Omega-Themes)
 - [Omega Website](https://github.com/Omega-Numworks/Omega-Website)
@@ -481,6 +481,8 @@ Here are the main links toward Omega's different websites and repositories, that
 - [External Apps](https://github.com/Omega-Numworks/External-Apps)
 
 ## About Epsilon
+
+Mu is a fork of Upsilon designed for embedded computing experimentation.
 
 Upsilon is a fork of Omega, after the project's discontinuation.
 
@@ -498,3 +500,4 @@ NumWorks SAS, Nintendo of America Inc and Casio aren't associated in any shape o
 - NumWorks Epsilon is released under a [CC BY-NC-SA License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 - Omega is released under a [CC BY-NC-SA License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 - Upsilon is released under a [CC BY-NC-SA License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+- Mu is released under a [CC BY-NC-SA License](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
